@@ -7,13 +7,19 @@ function TodoForm({ addTodo }) {
     const [todo, updateTodo, resetTodo] = useInputState("")
 
     return (
-        <Paper>
+        <Paper style={{ margin: "1rem 0", padding: "0 1rem" }}>
             <form onSubmit={(e) => {
                 e.preventDefault();
                 addTodo(todo);
                 resetTodo()
             }}>
-                <TextField value={todo} onChange={updateTodo} />
+                <TextField
+                    value={todo}
+                    onChange={updateTodo}
+                    margin="normal"
+                    label="Add New Todo"
+                    fullWidth
+                />
             </form>
         </Paper >
     )
