@@ -13,9 +13,6 @@ function TodoApp() {
     const initialTodos = []
     const { todos, addTodo, removeTodo, editTodo, toggleTodo } = useTodoState(initialTodos);
 
-
-
-
     return (
         <Paper style={{
             padding: 0,

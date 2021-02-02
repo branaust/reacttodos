@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 function useLocalStorageState(key, defaultVal) {
-    // make piece of state based off of local storgae (or default)
+    // make piece of state based off of value in local storgae (or default)
     const [state, setState] = useState(() => {
         let val;
         try {
