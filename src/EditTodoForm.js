@@ -5,11 +5,11 @@ import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction"
 import IconButton from "@material-ui/core/IconButton"
 import DoneIcon from '@material-ui/icons/Done';
 import CancelIcon from '@material-ui/icons/Cancel';
-import { TodosContext } from './contexts/todos.context'
+import { DispatchContext } from './contexts/todos.context'
 
 function EditTodoForm({ task, id, toggle }) {
     const [value, handleChange, reset] = useInputState(task)
-    const { dispatch } = useContext(TodosContext)
+    const dispatch = useContext(DispatchContext)
     return (
         <form onSubmit={(e) => {
             e.preventDefault();

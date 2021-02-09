@@ -7,14 +7,14 @@ import Checkbox from "@material-ui/core/Checkbox"
 import IconButton from "@material-ui/core/IconButton"
 import DeleteIcon from "@material-ui/icons/Delete"
 import EditIcon from "@material-ui/icons/Edit"
-import { TodosContext } from './contexts/todos.context'
+import { DispatchContext } from './contexts/todos.context'
 
 import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction"
 
 function Todo({ task, completed, id }) {
     const [isEditing, toggle] = useToggleState(false)
 
-    const { dispatch } = useContext(TodosContext)
+    const dispatch = useContext(DispatchContext)
 
     return (
         <ListItem style={{ height: "64px" }}>
